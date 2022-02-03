@@ -18,7 +18,7 @@ const LaunchType = new GraphQLObjectType({
     launch_year: { type: GraphQLString },
     date_local: { type: GraphQLString },
     success: { type: GraphQLBoolean },
-    rocket: { type: RocketType },
+    // rocket: { type: GraphQLString },
   }),
 });
 
