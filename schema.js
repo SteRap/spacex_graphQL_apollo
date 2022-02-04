@@ -15,10 +15,10 @@ const LaunchType = new GraphQLObjectType({
     id: { type: GraphQLString },
     flight_number: { type: GraphQLInt },
     name: { type: GraphQLString },
-    launch_year: { type: GraphQLString },
     date_local: { type: GraphQLString },
     success: { type: GraphQLBoolean },
-    // rocket: { type: GraphQLString },
+    details: { type: GraphQLString },
+    rocket: { type: GraphQLString },
   }),
 });
 
@@ -58,7 +58,7 @@ const RootQuery = new GraphQLObjectType({
           .then((res) => res.data);
       },
     },
-    rockets: {
+    rrockets: {
       type: new GraphQLList(RocketType),
       resolve(parent, args) {
         return axios
@@ -66,7 +66,7 @@ const RootQuery = new GraphQLObjectType({
           .then((res) => res.data);
       },
     },
-    rocket: {
+    rrocket: {
       type: RocketType,
       args: {
         id: {

@@ -1,14 +1,18 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { useQuery, gql } from "@apollo/client";
+import LaunchItem from "./LaunchItem";
+import MissionKey from "./MissionKey";
 
 const LAUNCHES_QUERY = gql`
   query LaunchesQuery {
     launches {
       flight_number
+      id
       name
-      launch_year
       date_local
       success
+      details
+      rocket
     }
   }
 `;
@@ -17,14 +21,21 @@ function LaunchesQuery() {
   const { loading, error, data } = useQuery(LAUNCHES_QUERY);
   if (loading) return <h4>loading..</h4>;
   if (error) console.log(error);
-  return <h1>test</h1>;
+  return (
+    <Fragment>
+      {data.launches.map((launch) => {
+        return <LaunchItem key={launch.flight_number} launch={launch} />;
+      })}
+    </Fragment>
+  );
 }
 
 export default function Launches() {
   return (
-    <div>
-      <h1 className="display-4 my-3 mx-5">Launches</h1>
+    <Fragment>
+      <h1 className="display-4 my-3 ">Launches</h1>
+      <MissionKey />
       <LaunchesQuery />
-    </div>
+    </Fragment>
   );
 }
