@@ -25,11 +25,11 @@ export default function LaunchItem({
             Date: <Moment format="YYYY-MM-DD HH:mm">{date_local}</Moment>
           </p>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 position-relative m-auto ">
           <Link
             to={`/launch/${id}`}
             type="button"
-            className="btn btn-outline-light"
+            className="btn btn-outline-light "
           >
             Launch Details
           </Link>
