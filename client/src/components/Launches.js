@@ -21,13 +21,7 @@ function LaunchesQuery() {
   const { loading, error, data } = useQuery(LAUNCHES_QUERY);
   if (loading) return <h4>loading..</h4>;
   if (error) console.log(error);
-  return (
-    <Fragment>
-      {data.launches.map((launch) => {
-        return <LaunchItem key={launch.flight_number} launch={launch} />;
-      })}
-    </Fragment>
-  );
+  return <Fragment>{data.launches.map((launch) => {})}</Fragment>;
 }
 
 export default function Launches() {
