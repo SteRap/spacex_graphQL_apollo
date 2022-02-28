@@ -8,6 +8,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
