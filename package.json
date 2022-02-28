@@ -1,13 +1,10 @@
 {
   "name": "spacex",
   "version": "1.0.0",
-  "homepage": "https://gitname.github.io/spacex_graphQL_apollo/",
   "description": "App that lists SpaceX launch missions",
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "start": "node server.js",
     "server": "nodemon server.js",
