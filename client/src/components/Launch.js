@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Fragment } from "react";
 import { useQuery, gql } from "@apollo/client";
 import { Link, useParams } from "react-router-dom";
+import Rocket from "./Rocket";
 import classNames from "classnames";
 import Moment from "react-moment";
 import App from "../App";
@@ -16,6 +17,9 @@ const LAUNCHES_QUERY = gql`
       success
       details
       rocket
+      links {
+        article
+      }
     }
   }
 `;
@@ -28,7 +32,7 @@ function LaunchesQuery() {
   if (loading) return <h4>loading...</h4>;
   if (error) console.log(error);
   console.log(data);
-  const { flight_number, name, date_local, success, details, rocket } =
+  const { flight_number, name, date_local, success, details, rocket, links } =
     data.launch;
   return (
     <Fragment>
@@ -61,11 +65,15 @@ function LaunchesQuery() {
             <strong>Description of the mission:</strong>{" "}
             {details ? details : "Description not available"}
           </li>
-          <li className="list-group-item bg-dark pb-3">
-            <strong>Rocket ID:</strong> {rocket}
+          <li className="list-group-item bg-dark pb-3 ">
+            <strong>Read the full article: </strong> Bring me there
+            <a className="mx-2 " href={links.article} target="_blank">
+              <i className="fas fa-arrow-right "></i>
+            </a>
           </li>
         </ul>
         <hr />
+        <Rocket rocket={rocket} />
         <Link
           to="/"
           type="button"

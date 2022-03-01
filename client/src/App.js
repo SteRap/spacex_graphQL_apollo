@@ -24,7 +24,8 @@ function App() {
               display: "flex",
               position: "relative",
               marginInline: "auto",
-              top: "-3rem",
+              top: "-2rem",
+              marginBottom: "-6rem",
             }}
           ></img>
           <Routes>

@@ -19,6 +19,14 @@ const LaunchType = new GraphQLObjectType({
     success: { type: GraphQLBoolean },
     details: { type: GraphQLString },
     rocket: { type: GraphQLString },
+    links: {
+      type: new GraphQLObjectType({
+        name: "LaunchLinks",
+        fields: {
+          article: { type: GraphQLString },
+        },
+      }),
+    },
   }),
 });
 
@@ -30,6 +38,28 @@ const RocketType = new GraphQLObjectType({
     name: { type: GraphQLString },
     type: { type: GraphQLString },
     first_flight: { type: GraphQLString },
+    active: { type: GraphQLBoolean },
+    description: { type: GraphQLString },
+    cost_per_launch: { type: GraphQLInt },
+    height: {
+      type: new GraphQLObjectType({
+        name: "RocketHeight",
+        fields: {
+          meters: { type: GraphQLString },
+          feet: { type: GraphQLString },
+        },
+      }),
+    },
+    mass: {
+      type: new GraphQLObjectType({
+        name: "RocketWeight",
+        fields: {
+          kg: { type: GraphQLString },
+          lb: { type: GraphQLString },
+        },
+      }),
+    },
+    flickr_images: { type: new GraphQLList(GraphQLString) },
   }),
 });
 
@@ -58,7 +88,7 @@ const RootQuery = new GraphQLObjectType({
           .then((res) => res.data);
       },
     },
-    rrockets: {
+    rockets: {
       type: new GraphQLList(RocketType),
       resolve(parent, args) {
         return axios
@@ -66,7 +96,7 @@ const RootQuery = new GraphQLObjectType({
           .then((res) => res.data);
       },
     },
-    rrocket: {
+    rocket: {
       type: RocketType,
       args: {
         id: {
