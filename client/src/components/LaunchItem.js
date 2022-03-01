@@ -4,7 +4,7 @@ import Moment from "react-moment";
 import { Link } from "react-router-dom";
 
 export default function LaunchItem({
-  launch: { flight_number, id, name, date_local, success, details, rocket },
+  launch: { id, name, date_local, success },
 }) {
   return (
     <div className="card card-body mb-3">
