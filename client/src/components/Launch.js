@@ -38,7 +38,7 @@ function LaunchesQuery() {
     <Fragment>
       <div>
         <h1 className="display-4 my-3">
-          <span className="text-white">Mansion: {name}</span>
+          <span className="text-white">Mission: {name}</span>
         </h1>
         <h2 className="mb-3">Launch Details</h2>
         <ul className="list-group h5">
