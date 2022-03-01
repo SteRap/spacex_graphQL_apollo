@@ -32,6 +32,7 @@ function App() {
             <Route exact path="/" element={<Launches />} />
             <Route exact path="/launch/:id" element={<Launch />} />
           </Routes>
+          <h1>Test</h1>
         </div>
       </BrowserRouter>
     </ApolloProvider>
