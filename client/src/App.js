@@ -16,7 +16,7 @@ function App() {
     <ApolloProvider client={client}>
       <BrowserRouter>
         <div className="container">
-          <img
+          {/* <img
             src={logo}
             alt="SpaceX"
             style={{
@@ -27,7 +27,7 @@ function App() {
               top: "-2rem",
               marginBottom: "-6rem",
             }}
-          ></img>
+          ></img> */}
           <Routes>
             <Route exact path="/" element={<Launches />} />
             <Route exact path="/launch/:id" element={<Launch />} />
