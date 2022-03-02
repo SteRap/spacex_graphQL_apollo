@@ -97,6 +97,7 @@ export default function Rocket(props) {
           className="d-flex mx-auto"
           alt={name}
           src={flickr_images[randomNum]}
+          style={{ width: "80vw" }}
         />
         <hr />
       </div>
