@@ -1,7 +1,7 @@
 <h1># Project with SpaceX API using GraphQL and Apollo</h1>
 https://radiant-sands-55345.herokuapp.com
 
-<h2>Full-stack webapp that list the launch missions of SpaceX</h2>
+<h2>Full-stack webapp that lists the launch missions of SpaceX</h2>
 
 ![alt text](client/src/Media/Preview1.png)
 
@@ -10,6 +10,8 @@ Motivated by the desire to acquire knowledge and experience on new tech tools, n
 Researching online, I have found the SpaceX API (<a target="_blank" href="https://github.com/r-spacex/SpaceX-API" >github repositiory</a>) which provide countless information about launch missions, vehicles and more. Suddenly, I realized it could have been the perfect resource for a project that applies a Query Language.
 The webapp allows the visitors to search through all the SpaceX launch mission (about 155) from 2008 untill the latest one (the API is maintened and currently updated).
 Additionally, the visitor can get more detailed information of a specific mission and the used Rocket by clicking on the selected launch mission.
+
+![alt text](client/src/Media/Preview2.png)
 
 <h2>Technologies</h2>
 <h3>Frontend</h3>
