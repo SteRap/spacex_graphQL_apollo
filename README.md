@@ -19,10 +19,10 @@ For the frontend, the UI application is done exclusively by using Bootstrap and 
 
 <h3>Backend</h3>
 
-For the backend, I used NODE.js powered with EXPRESS.js in combination with <a href="https://graphql.org/">GraphQL</a>. GraphQL allowed me to tweak the public APIs GraphQL in order to ask for only the data I needed and nothing more.
+For the backend, I used NODE.js powered with EXPRESS.js in combination with <a href="https://graphql.org/">GraphQL</a>. GraphQL allowed me to tweak the public APIs in order to ask for only the data I needed and nothing more.
 
 <h3>Hosting</h3>
-The application (Client and Server side) are hosted on HEROKU https://www.heroku.com/home
+The application (Client and Server side) are hosted on <a href="https://www.heroku.com/home">HEROKU</a>.
 
 <h2>Learnings</h2>
 
