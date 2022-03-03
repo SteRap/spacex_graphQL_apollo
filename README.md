@@ -7,7 +7,7 @@ https://radiant-sands-55345.herokuapp.com
 
 <h2>Introduction and Motivation </h2>
 Motivated by the desire to acquire knowledge and experience on new tech tools, namely <strong>GraphQL</strong> and <strong>Apollo</strong>, I decided to work on this project.
-Researching online, I have found the SpaceX API (<a target="_blank" href="https://github.com/r-spacex/SpaceX-API" >github repositiory</a>) which provide countless information about launch missions, vehicles and more. Suddenly, I realized it could have been the perfect resource for a project that applies a Query Language.
+Researching online, I have found the SpaceX API (<a target="_blank" href="https://github.com/r-spacex/SpaceX-API" >github repository</a>) which provide countless information about launch missions, vehicles and more. Suddenly, I realized it could have been the perfect resource for a project that applies a Query Language.
 The webapp allows the visitors to search through all the SpaceX launch mission (about 155) from 2008 untill the latest one (the API is maintened and currently updated).
 Additionally, the visitor can get more detailed information of a specific mission and the used Rocket by clicking on the selected launch mission.
 
